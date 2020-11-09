@@ -1,0 +1,12 @@
+{
+  "group1": {
+    "name": "prom/prometheus",
+    "type": "docker",
+    "value": "v2.19.0"
+  },
+  "group2": {
+    "name": "grafana/grafana",
+    "type": "docker",
+    "value": "7.2.2"
+  },
+}
