@@ -1,23 +1,30 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
-  "regexManagers": [
-    {
-      "fileMatch": ["^defaults/main.yml$"],
-      "matchStringsStrategy": "combination",
-      "matchStrings": ["prometheus_image:\\s*\"(?<depName>.*)\"\\s*", "prometheus_version:\\s*\"(?<currentValue>.*)\"\\s*"],
-      "datasourceTemplate": "docker"
-    },
-    {
-      "fileMatch": ["^example.json$"],
-      "matchStringsStrategy": "recursive",
-      "matchStrings": [
-        "\"group.{1}\":\\s*\\{[^}]*}", 
-        "\"name\":\\s*\"(?<depName>.*)\"[^\"]*\"type\":\\s*\"(?<datasource>.*)\"[^\"]*\"value\":\\s*\"(?<currentValue>.*)\"",
-      ],
-      "datasourceTemplate": "docker"
-    }
-  ]
+   "$schema":"https://docs.renovatebot.com/renovate-schema.json",
+   "extends":[
+      "config:base"
+   ],
+   "regexManagers":[
+      {
+         "fileMatch":[
+            "^defaults/main.yml$"
+         ],
+         "matchStringsStrategy":"combination",
+         "matchStrings":[
+            "prometheus_image:\\s*\"(?<depName>.*)\"\\s*",
+            "prometheus_version:\\s*\"(?<currentValue>.*)\"\\s*"
+         ],
+         "datasourceTemplate":"docker"
+      },
+      {
+         "fileMatch":[
+            "^example.json$"
+         ],
+         "matchStringsStrategy":"recursive",
+         "matchStrings":[
+            "\"group.{1}\":\\s*\\{[^}]*}",
+            "\"name\":\\s*\"(?<depName>.*)\"[^\"]*\"type\":\\s*\"(?<datasource>.*)\"[^\"]*\"value\":\\s*\"(?<currentValue>.*)\""
+         ],
+         "datasourceTemplate":"docker"
+      }
+   ]
 }
