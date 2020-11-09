@@ -9,7 +9,7 @@
       "matchStringsStrategy": "combination",
       "matchStrings": ["prometheus_image:\\s*\"(?<depName>.*)\"\\s*", "prometheus_version:\\s*\"(?<currentValue>.*)\"\\s*"],
       "datasourceTemplate": "docker"
-    }
+    },
     {
       "fileMatch": ["^example.json$"],
       "matchStringsStrategy": "recursive",
