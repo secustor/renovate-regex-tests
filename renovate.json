@@ -10,5 +10,14 @@
       "matchStrings": ["prometheus_image:\\s*\"(?<depName>.*)\"\\s*", "prometheus_version:\\s*\"(?<currentValue>.*)\"\\s*"],
       "datasourceTemplate": "docker"
     }
+    {
+      "fileMatch": ["^example.json$"],
+      "matchStringsStrategy": "recursive",
+      "matchStrings": [
+        "\"group.{1}\":\\s*\\{[^}]*}", 
+        "\"name\":\\s*\"(?<depName>.*)\"[^\"]*\"type\":\\s*\"(?<datasource>.*)\"[^\"]*\"value\":\\s*\"(?<currentValue>.*)\"",
+      ],
+      "datasourceTemplate": "docker"
+    }
   ]
 }
