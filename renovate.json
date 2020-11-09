@@ -6,8 +6,8 @@
     {
       "fileMatch": ["^defaults/main.yml$"],
       "matchStringsStrategy": "combination",
-      "matchStrings": ['prometheus_image:\s*"(?<depName>.*)"\s*',
-                       'prometheus_version:\s*"(?<currentValue>.*)"\s*'
+      "matchStrings": ["prometheus_image:\s*\"(?<depName>.*)\"\s*",
+                       "prometheus_version:\s*\"(?<currentValue>.*)\"\s*"
                        ],
       "datasourceTemplate": "docker"
     }
