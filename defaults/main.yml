@@ -1,2 +1,2 @@
 prometheus_image: "prom/prometheus"
-prometheus_version: "v2.21.0"
+prometheus_version: "v2.22.1"
